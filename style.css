@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #202124; /* Slightly softer dark background */
+    color: #e8eaed; /* Light text color for readability */
+}
+
+header {
+    background-color: #292a2d; /* Darker shade for header */
+    color: #ffffff; /* White text for header */
+    padding: 1.5rem 0; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em; /* Slightly larger heading */
+    color: #8ab4f8; /* Google Blue - lighter shade for better contrast on dark background */
+}
+
+header a {
+    color: #e8eaed; /* Light text color for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+header a:hover {
+    color: #bdc1cb; /* Lighter color on hover */
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem 20px; /* Increased padding */
+    margin: 20px auto; /* Increased margin */
+    max-width: 800px;
+    background-color: #292a2d; /* Match header background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* More prominent shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+    color: #8ab4f8; /* Use Google Blue for section headings */
+    border-bottom: 2px solid #5f6368; /* Neutral grey for border */
+    padding-bottom: 10px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 2.2em; /* Larger subheadings */
+}
+
+.job, .project, .degree {
+    margin-bottom: 20px; /* Increased margin */
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #5f6368; /* Neutral grey dashed border */
+}
+
+.job:last-child, .project:last-child, .degree:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+.job h3, .project h3, .degree h3 {
+    margin: 0 0 8px 0; /* Adjusted margin */
+    font-size: 1.6em; /* Slightly larger item titles */
+    color: #a5d6a7; /* Google Green - lighter shade */
+}
+
+.date {
+    font-style: italic;
+    color: #bdc1cb; /* Lighter grey for dates */
+    margin-bottom: 10px; /* Increased margin */
+    font-size: 1em; /* Slightly larger font for dates */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0; /* Increased padding */
+    background-color: #292a2d; /* Match header and section background */
+    color: #e8eaed; /* Light text color for footer */
+    margin-top: 20px; /* Add margin to separate from last section */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow on top */
+}
