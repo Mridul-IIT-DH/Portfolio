@@ -4,71 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mridul Chandrawanshi - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4F46E5, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800 with 50% opacity */
+            border: 1px solid #374151; /* border-gray-700 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Mridul Chandrawanshi</h1>
-        <p>Email: mriduldoeswork@gmail.com | Phone: 8959787287 | <a href="https://www.linkedin.com/in/mriduldoeswork" target="_blank">LinkedIn</a> | <a href="https://github.com/mriduldoeswork" target="_blank">GitHub</a></p>
-    </header>
+<body class="bg-gray-900 text-gray-300 antialiased">
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Quality Assurance Engineer Intern, Evertz India Pvt. Ltd</h3>
-            <p class="date">January 2023 – July 2023</p>
-            <p>Identified and fixed several bugs, significantly improving the cloud application’s performance and user experience. Utilized technologies such as Jira, Testrail, GitHub, Confluence, SQL. Responsible for testing Evertz’s new cloud application.</p>
-        </div>
-        <div class="job">
-            <h3>Software Developer Intern, HighRadius Corporation</h3>
-            <p class="date">January 2022 – April 2022</p>
-            <p>Built and deployed an AI-enabled fintech B2B cloud application while working for HighRadius. Developed a deep understanding of all aspects of product development such as identifying appropriate user requirements, designing a great user experience, and building appropriate data models and machine learning models along with relevant UI components and backend design.</p>
-        </div>
-    </section>
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Smart Farming System with ML, IPFS, and Ethereum</h3>
-            <p>Developed a comprehensive smart farming platform integrating Machine Learning, decentralized storage (IPFS), and blockchain technology (Ethereum) to enhance agricultural practices. Gained experience in full-stack development, including a Django, React, Solidity smart contracts, and integration with IPFS (Pinata) and Web3.py. Used the online IDE named Project IDX by Google to make this project system independent.</p>
-        </div>
-        <div class="project">
-            <h3>Decentralized Air Quality Monitoring System</h3>
-            <p>Developed a decentralized air quality monitoring system leveraging blockchain and IPFS for secure and transparent data storage. Gained experience in the full development lifecycle, including smart contract development (Solidity, Truffle) on a local Ethereum blockchain (Ganache), backend API design (Node.js, Express.js), frontend development (HTML, CSS, JavaScript, Parcel), and blockchain interaction (Web3.js). Integrated with Web3.js to interact with the smart contract and Pinata’s API to pin sensor data to IPFS, ensuring data immutability and decentralization. Used the online IDE named Project IDX by Google to make this project system independent.</p>
-        </div>
-        <div class="project">
-            <h3>Campus Mart</h3>
-            <p>Built a buying and selling platform. Learned Figma, Flask, how to use APIs, and how to deploy a database using SQL Workbench from scratch. Improved knowledge of HTML, CSS, JavaScript, Git, and GitHub.</p>
-        </div>
-        <div class="project">
-            <h3>AI-enabled Fintech B2B Cloud Application</h3>
-            <p>Built and deployed an AI-enabled fintech B2B cloud application (with HighRadius). Involved in the development of a full-stack web-based product, which included understanding product development, data modeling, and machine learning models along with UI components and backend design.</p>
-        </div>
-    </section>
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight gradient-text">
+                Mridul Chandrawanshi
+            </h1>
+            <p class="mt-4 text-lg text-gray-400">Software Developer & Open Source Contributor</p>
+            <div class="mt-6 flex justify-center items-center space-x-6 text-gray-400">
+                <a href="https://www.linkedin.com/in/mriduldoeswork" target="_blank" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+                <span>&bull;</span>
+                <a href="https://github.com/mriduldoeswork" target="_blank" class="hover:text-indigo-400 transition-colors">GitHub</a>
+                <span>&bull;</span>
+                <a href="mailto:mriduldoeswork@gmail.com" class="hover:text-indigo-400 transition-colors">mriduldoeswork@gmail.com</a>
+            </div>
+        </header>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="degree">
-            <h3>Indian Institute of Technology Dharwad</h3>
-            <p>M.Tech in Computer Science Engineering</p>
-            <p class="date">2024 – 2026</p>
-        </div>
-        <div class="degree">
-            <h3>Kalinga Institute of Industrial Technology (CGPA: 8.80)</h3>
-            <p>B.Tech in Computer Science and System Engineering</p>
-            <p class="date">2019 – 2023</p>
-        </div>
-    </section>
+        <!-- Navigation -->
+        <nav class="sticky top-4 z-10 bg-gray-800/60 backdrop-blur-md rounded-full mb-16 shadow-lg border border-gray-700">
+            <ul class="flex justify-center items-center space-x-4 sm:space-x-8 p-3 text-sm sm:text-base font-medium">
+                <li><a href="#experience" class="hover:text-indigo-400 transition-colors px-3 py-2">Experience</a></li>
+                <li><a href="openSourceContributions.html" class="hover:text-indigo-400 transition-colors px-3 py-2">Open Source</a></li>
+                <li><a href="#projects" class="hover:text-indigo-400 transition-colors px-3 py-2">Projects</a></li>
+                <li><a href="#education" class="hover:text-indigo-400 transition-colors px-3 py-2">Education</a></li>
+            </ul>
+        </nav>
 
-    <section id="technologies">
-        <h2>Technologies</h2>
-        <p><strong>Languages:</strong> C, C++, Java, Python, HTML, CSS, JavaScript, SQL, Docker.</p>
-        <p><strong>Technologies:</strong> Linux, Git, MySQL Workbench, VS Code.</p>
-    </section>
+        <main>
+            <!-- Experience Section -->
+            <section id="experience" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl sm:text-3xl font-bold gradient-text mb-6">Experience</h2>
+                <div class="space-y-6">
+                    <div class="section-card">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-100">Quality Assurance Engineer Intern</h3>
+                            <p class="text-sm text-gray-500 mt-1 sm:mt-0">January 2023 – July 2023</p>
+                        </div>
+                        <p class="text-indigo-400 font-medium mb-3">Evertz India Pvt. Ltd</p>
+                        <p>Identified and fixed several bugs, significantly improving cloud application performance. Utilized Jira, Testrail, GitHub, Confluence, and SQL for testing a new cloud application.</p>
+                    </div>
+                    <div class="section-card">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                            <h3 class="text-xl font-semibold text-gray-100">Software Developer Intern</h3>
+                             <p class="text-sm text-gray-500 mt-1 sm:mt-0">January 2022 – April 2022</p>
+                        </div>
+                         <p class="text-indigo-400 font-medium mb-3">HighRadius Corporation</p>
+                        <p>Built and deployed an AI-enabled fintech B2B cloud application. Gained deep understanding of the full product development lifecycle, including requirements, UX, data modeling, ML models, and backend/UI design.</p>
+                    </div>
+                </div>
+            </section>
 
-    <footer>
-        <p>&copy; 2023 Mridul Chandrawanshi</p>
-    </footer>
+            <!-- Open Source Contributions Section -->
+            <section id="openSourceContributions" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl sm:text-3xl font-bold gradient-text mb-6">Open Source Contributions</h2>
+                <div class="space-y-6">
+                    <div class="section-card">
+                        <a href="openSourceContributions.html" class="hover:text-indigo-400 transition-colors px-3 py-2">Click to see my contributions.</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl sm:text-3xl font-bold gradient-text mb-6">Projects</h2>
+                <div class="space-y-6">
+                    <div class="section-card">
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Smart Farming System with ML, IPFS, and Ethereum</h3>
+                        <p>Developed a comprehensive smart farming platform integrating Machine Learning, decentralized storage (IPFS), and blockchain (Ethereum). Gained full-stack experience with Django, React, Solidity, Web3.py, and IPFS.</p>
+                    </div>
+                    <div class="section-card">
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Decentralized Air Quality Monitoring System</h3>
+                        <p>Developed a decentralized air quality monitoring system using blockchain and IPFS. Experienced in smart contracts (Solidity, Truffle), backend (Node.js, Express.js), frontend (HTML, CSS, JS), and blockchain interaction (Web3.js).</p>
+                    </div>
+                    <div class="section-card">
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Campus Mart</h3>
+                        <p>Built a buying and selling platform. Learned Figma, Flask, API usage, and SQL database deployment. Improved skills in HTML, CSS, JavaScript, and Git/GitHub.</p>
+                    </div>
+                    <div class="section-card">
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">AI-enabled Fintech B2B Cloud Application</h3>
+                        <p>Built and deployed an AI-enabled fintech B2B cloud application with HighRadius. Involved in full-stack web product development, including data modeling, ML models, and UI/backend design.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="mb-16 scroll-mt-24">
+                <h2 class="text-2xl sm:text-3xl font-bold gradient-text mb-6">Education</h2>
+                <div class="space-y-6">
+                    <div class="section-card">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                             <h3 class="text-xl font-semibold text-gray-100">Indian Institute of Technology Dharwad</h3>
+                             <p class="text-sm text-gray-500 mt-1 sm:mt-0">2024 – 2026</p>
+                        </div>
+                        <p class="text-indigo-400 font-medium">M.Tech in Computer Science Engineering</p>
+                    </div>
+                    <div class="section-card">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                             <h3 class="text-xl font-semibold text-gray-100">Kalinga Institute of Industrial Technology</h3>
+                             <p class="text-sm text-gray-500 mt-1 sm:mt-0">2019 – 2023</p>
+                        </div>
+                        <p class="text-indigo-400 font-medium">B.Tech in Computer Science and System Engineering (CGPA: 8.80)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Section -->
+            <section id="technologies" class="mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold gradient-text mb-6">Technologies</h2>
+                <div class="section-card">
+                    <p class="font-semibold text-gray-100 mb-3">Languages:</p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">C</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">C++</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">Java</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">CSS</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">SQL</span>
+                    </div>
+                     <p class="font-semibold text-gray-100 mt-4 mb-3">Tools & Technologies:</p>
+                    <div class="flex flex-wrap">
+                         <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">Linux</span>
+                         <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">Git</span>
+                         <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">MySQL Workbench</span>
+                         <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">VS Code</span>
+                         <span class="bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">IDX - Google</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12">
+            <p class="text-gray-500">&copy; 2024 Mridul Chandrawanshi</p>
+        </footer>
+
+    </div>
 </body>
 </html>
